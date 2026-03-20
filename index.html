@@ -16,6 +16,7 @@
         }
         h1 { color: #ffffff; font-size: 1.8em; margin-bottom: 0.2em; }
         h2 { color: #c0c0c0; font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid #2a2d3a; padding-bottom: 0.3em; }
+        h3 { color: #b0b0b0; font-size: 1.05em; margin-top: 1.2em; }
         p, li { font-size: 0.95em; }
         a { color: #b388ff; }
         .updated { color: #888; font-size: 0.85em; }
@@ -23,14 +24,15 @@
         table { width: 100%; border-collapse: collapse; margin: 1em 0; }
         th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #2a2d3a; font-size: 0.9em; }
         th { color: #aaa; font-weight: 600; }
+        code { background: #232636; padding: 2px 5px; border-radius: 3px; font-size: 0.88em; }
     </style>
 </head>
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: March 20, 2026</p>
+<p class="updated">Last updated: March 21, 2026</p>
 
-<p><strong>Gridline</strong> ("the App") is a mobile block puzzle game ("we", "us"). This policy describes what data the App collects and how it is used.</p>
+<p><strong>Gridline</strong> ("the App") is a mobile block puzzle game ("we", "us"). This policy describes what data the App collects, how it is used, and how it is protected.</p>
 
 <h2>1. Data We Collect</h2>
 
@@ -40,11 +42,35 @@
 
 <table>
     <tr><th>Data</th><th>Purpose</th><th>Service</th></tr>
-    <tr><td>Advertising ID</td><td>Serve ads</td><td>Google AdMob</td></tr>
-    <tr><td>App usage events (game start, game over, theme change)</td><td>Understand how the game is played</td><td>Firebase Analytics</td></tr>
-    <tr><td>Crash logs and stack traces</td><td>Fix bugs and improve stability</td><td>Firebase Crashlytics</td></tr>
+    <tr><td>Advertising ID</td><td>Serve ads and measure ad performance</td><td>Google AdMob</td></tr>
+    <tr><td>Firebase Installation ID (FID)</td><td>Identify app installations for analytics (not tied to personal identity)</td><td>Firebase</td></tr>
+    <tr><td>App usage events (see details below)</td><td>Understand how the game is played and improve the experience</td><td>Firebase Analytics</td></tr>
+    <tr><td>Crash logs, stack traces, and diagnostic keys</td><td>Fix bugs and improve stability</td><td>Firebase Crashlytics</td></tr>
     <tr><td>Device info (model, OS version, country)</td><td>Analytics and crash reporting</td><td>Firebase</td></tr>
 </table>
+
+<h3>Analytics Events Collected</h3>
+
+<p>The App logs the following anonymous events to Firebase Analytics:</p>
+
+<table>
+    <tr><th>Event</th><th>Parameters</th></tr>
+    <tr><td><code>game_start</code></td><td>Game mode, theme</td></tr>
+    <tr><td><code>game_over</code></td><td>Game mode, score, duration, theme, cause</td></tr>
+    <tr><td><code>duel_start</code></td><td>Bot preset, difficulty, theme</td></tr>
+    <tr><td><code>duel_result</code></td><td>Result (win/loss/draw), player and bot scores, preset, turns, duration</td></tr>
+    <tr><td><code>boost_used</code></td><td>Boost type (swap/erase/reshuffle/freeze), game mode</td></tr>
+    <tr><td><code>revive_used</code></td><td>Game mode</td></tr>
+    <tr><td><code>mission_completed</code></td><td>Mission type, game mode</td></tr>
+    <tr><td><code>mission_timeout</code></td><td>Mission type, game mode</td></tr>
+    <tr><td><code>theme_changed</code></td><td>New theme</td></tr>
+    <tr><td><code>screen_opened</code></td><td>Screen name</td></tr>
+    <tr><td>Ad lifecycle events</td><td><code>ad_loaded</code>, <code>ad_shown</code>, <code>ad_rewarded</code>, <code>ad_dismissed</code>, <code>ad_load_failed</code>, <code>ad_show_failed</code></td></tr>
+</table>
+
+<h3>Crashlytics Data</h3>
+
+<p>Firebase Crashlytics collects crash logs, stack traces, and the following custom diagnostic keys: <code>game_mode</code>, <code>bot_preset</code>, <code>bot_difficulty</code>. This data helps us identify and fix bugs. Crashlytics collection is disabled in debug builds.</p>
 
 <h2>2. Data We Do NOT Collect</h2>
 <ul>
@@ -61,7 +87,9 @@
 
 <h2>4. Advertising</h2>
 
-<p>The App uses <strong>Google AdMob</strong> to display rewarded video ads. AdMob may collect your Advertising ID to serve relevant ads. You can reset or opt out of personalized ads in your device settings:</p>
+<p>The App uses <strong>Google AdMob</strong> to display rewarded video ads. AdMob may collect your Advertising ID to serve relevant ads.</p>
+
+<p>The App uses Google's <strong>User Messaging Platform (UMP)</strong> consent framework to present you with choices about ad personalization in accordance with applicable regulations (e.g., GDPR, ePrivacy). You can change your ad personalization preferences at any time through the consent dialog or your device settings:</p>
 <ul>
     <li><strong>Android:</strong> Settings &rarr; Privacy &rarr; Ads</li>
 </ul>
@@ -70,25 +98,30 @@
 <h2>5. Analytics</h2>
 
 <p>We use <strong>Firebase Analytics</strong> to collect anonymous usage data (such as which game modes are played and average session duration) and <strong>Firebase Crashlytics</strong> to collect crash reports. This data is aggregated and does not identify individual users.</p>
+<p>Firebase assigns a <strong>Firebase Installation ID (FID)</strong> to each app installation. This is a random identifier used solely for analytics aggregation and is not linked to any personal information. The FID is automatically reset if the user clears app data or reinstalls the App.</p>
 <p>Firebase may use your IP address to determine your country, but the IP address is not stored. For details, see the <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Privacy Policy</a>.</p>
 
-<h2>6. Children's Privacy</h2>
+<h2>6. Data Security</h2>
+
+<p>All data transmitted from the App to Firebase and AdMob services is encrypted in transit using <strong>HTTPS/TLS</strong>. Firebase and Google apply industry-standard security measures to protect stored data. We do not operate our own servers or databases — all collected data resides within Google's Firebase infrastructure.</p>
+
+<h2>7. Children's Privacy</h2>
 
 <p>The App is not directed at children under 13. We do not knowingly collect data from children. If you believe a child has provided us with personal data, please contact us so we can delete it.</p>
 
-<h2>7. Data Sharing</h2>
+<h2>8. Data Sharing</h2>
 
 <p>We do not sell, trade, or share your data with third parties, except as described above (Google AdMob and Firebase services). No data is sent to our own servers.</p>
 
-<h2>8. Data Retention</h2>
+<h2>9. Data Retention</h2>
 
 <p>Analytics data is retained by Firebase according to their default retention policies (typically 14 months). Crash reports are retained for 90 days. We do not maintain any separate database of user data.</p>
 
-<h2>9. Changes to This Policy</h2>
+<h2>10. Changes to This Policy</h2>
 
 <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
 
-<h2>10. Contact</h2>
+<h2>11. Contact</h2>
 
 <p>If you have questions about this Privacy Policy, contact us at:</p>
 <p><a href="mailto:gridline.app@proton.me">gridline.app@proton.me</a></p>
