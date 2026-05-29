@@ -22,7 +22,7 @@
         .updated { color: #888; font-size: 0.85em; }
         ul { padding-left: 1.5em; }
         table { width: 100%; border-collapse: collapse; margin: 1em 0; }
-        th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #2a2d3a; font-size: 0.9em; }
+        th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #2a2d3a; font-size: 0.9em; vertical-align: top; }
         th { color: #aaa; font-weight: 600; }
         code { background: #232636; padding: 2px 5px; border-radius: 3px; font-size: 0.88em; }
     </style>
@@ -30,28 +30,32 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: March 21, 2026</p>
+<p class="updated">Last updated: May 29, 2026</p>
 
-<p><strong>Gridline</strong> ("the App") is a mobile block puzzle game ("we", "us"). This policy describes what data the App collects, how it is used, and how it is protected.</p>
+<p><strong>Gridline</strong> ("the App", "we", "us") is a mobile block puzzle game. This Privacy Policy explains what data may be collected or processed when you use the App, how that data is used, and how it is protected.</p>
 
-<h2>1. Data We Collect</h2>
+<p>The App does not require users to create an account and does not ask users to provide direct personal information such as name, email address, phone number, or account credentials.</p>
 
-<p>The App does not collect any personally identifiable information (PII). We do not ask for your name, email, phone number, or account credentials.</p>
+<p>However, the App uses third-party services, including Google AdMob, Google User Messaging Platform, Firebase Analytics, and Firebase Crashlytics. These services may automatically collect or process certain data as described below.</p>
 
-<p>The following data is collected automatically through third-party services:</p>
+<h2>1. Data We Collect or Process</h2>
+
+<p>The following data may be collected automatically through third-party services used by the App:</p>
 
 <table>
     <tr><th>Data</th><th>Purpose</th><th>Service</th></tr>
-    <tr><td>Advertising ID</td><td>Serve ads and measure ad performance</td><td>Google AdMob</td></tr>
-    <tr><td>Firebase Installation ID (FID)</td><td>Identify app installations for analytics (not tied to personal identity)</td><td>Firebase</td></tr>
-    <tr><td>App usage events (see details below)</td><td>Understand how the game is played and improve the experience</td><td>Firebase Analytics</td></tr>
-    <tr><td>Crash logs, stack traces, and diagnostic keys</td><td>Fix bugs and improve stability</td><td>Firebase Crashlytics</td></tr>
-    <tr><td>Device info (model, OS version, country)</td><td>Analytics and crash reporting</td><td>Firebase</td></tr>
+    <tr><td>Advertising ID and related ad identifiers</td><td>Serve rewarded ads, prevent fraud, measure ad performance, and support ad personalization where allowed by user consent and applicable law</td><td>Google AdMob</td></tr>
+    <tr><td>Consent status and advertising preferences</td><td>Manage privacy choices and ad personalization preferences</td><td>Google User Messaging Platform (UMP)</td></tr>
+    <tr><td>Firebase Installation ID (FID)</td><td>Identify an app installation for analytics, diagnostics, and service operation. This identifier is not used by us to identify a person directly.</td><td>Firebase</td></tr>
+    <tr><td>App usage events</td><td>Understand how the game is played, improve gameplay balance, improve user experience, and measure app performance</td><td>Firebase Analytics</td></tr>
+    <tr><td>Crash logs, stack traces, diagnostic information, and custom diagnostic keys</td><td>Find and fix bugs, crashes, and stability problems</td><td>Firebase Crashlytics</td></tr>
+    <tr><td>Device and app information, such as device model, operating system version, app version, language, and country or region</td><td>Analytics, diagnostics, crash reporting, fraud prevention, and app improvement</td><td>Firebase and Google services</td></tr>
+    <tr><td>Approximate location, such as country or region inferred from IP address or device signals</td><td>Analytics, advertising, fraud prevention, legal compliance, and service localization</td><td>Google services</td></tr>
 </table>
 
 <h3>Analytics Events Collected</h3>
 
-<p>The App logs the following anonymous events to Firebase Analytics:</p>
+<p>The App may log the following gameplay and app events to Firebase Analytics:</p>
 
 <table>
     <tr><th>Event</th><th>Parameters</th></tr>
@@ -70,60 +74,97 @@
 
 <h3>Crashlytics Data</h3>
 
-<p>Firebase Crashlytics collects crash logs, stack traces, and the following custom diagnostic keys: <code>game_mode</code>, <code>bot_preset</code>, <code>bot_difficulty</code>. This data helps us identify and fix bugs. Crashlytics collection is disabled in debug builds.</p>
+<p>Firebase Crashlytics may collect crash logs, stack traces, diagnostic information, and custom diagnostic keys such as <code>game_mode</code>, <code>bot_preset</code>, and <code>bot_difficulty</code>. This data is used to identify and fix bugs. Crashlytics collection is disabled in debug builds.</p>
 
-<h2>2. Data We Do NOT Collect</h2>
+<h2>2. Data We Do Not Collect Directly</h2>
+
+<p>The App does not directly ask users to provide:</p>
+
 <ul>
-    <li>Names, emails, phone numbers, or any personal identifiers</li>
-    <li>GPS location or precise coordinates</li>
-    <li>Contacts, photos, files, or any on-device content</li>
-    <li>Financial or payment information</li>
-    <li>Hardware IDs such as IMEI or MAC address</li>
+    <li>Name, email address, phone number, or account credentials</li>
+    <li>Precise GPS location or precise coordinates</li>
+    <li>Contacts, photos, files, or other user content stored on the device</li>
+    <li>Financial, payment card, or banking information</li>
+    <li>Hardware identifiers such as IMEI or MAC address</li>
 </ul>
+
+<p>Please note that third-party services used by the App may process identifiers, diagnostics, app activity, approximate location, and device information as described in this Privacy Policy.</p>
 
 <h2>3. Local Storage</h2>
 
-<p>Your game progress, scores, and settings are stored <strong>only on your device</strong>. This data is never transmitted to our servers or any third party. Uninstalling the App will delete this data.</p>
+<p>Your game progress, scores, settings, and local preferences are stored on your device. This local game data is not sent to our own servers. Uninstalling the App or clearing app data will delete this local data from your device.</p>
 
 <h2>4. Advertising</h2>
 
-<p>The App uses <strong>Google AdMob</strong> to display rewarded video ads. AdMob may collect your Advertising ID to serve relevant ads.</p>
+<p>The App uses <strong>Google AdMob</strong> to display rewarded video ads. Rewarded ads are optional and may be shown when you choose to use an in-game reward, such as a second chance or revive feature.</p>
 
-<p>The App uses Google's <strong>User Messaging Platform (UMP)</strong> consent framework to present you with choices about ad personalization in accordance with applicable regulations (e.g., GDPR, ePrivacy). You can change your ad personalization preferences at any time through the consent dialog or your device settings:</p>
+<p>Google AdMob may collect or process data such as Advertising ID, device information, approximate location, ad interactions, and other signals to serve ads, measure ad performance, prevent fraud, and comply with applicable law.</p>
+
+<p>The App uses Google's <strong>User Messaging Platform (UMP)</strong> consent framework to present privacy and ad personalization choices where required by applicable regulations, such as GDPR and ePrivacy rules. You may also manage ad personalization through your device settings:</p>
+
 <ul>
     <li><strong>Android:</strong> Settings &rarr; Privacy &rarr; Ads</li>
 </ul>
+
 <p>For more information, see the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
 
-<h2>5. Analytics</h2>
+<h2>5. Analytics and Diagnostics</h2>
 
-<p>We use <strong>Firebase Analytics</strong> to collect anonymous usage data (such as which game modes are played and average session duration) and <strong>Firebase Crashlytics</strong> to collect crash reports. This data is aggregated and does not identify individual users.</p>
-<p>Firebase assigns a <strong>Firebase Installation ID (FID)</strong> to each app installation. This is a random identifier used solely for analytics aggregation and is not linked to any personal information. The FID is automatically reset if the user clears app data or reinstalls the App.</p>
-<p>Firebase may use your IP address to determine your country, but the IP address is not stored. For details, see the <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Privacy Policy</a>.</p>
+<p>We use <strong>Firebase Analytics</strong> to understand how the App is used, which game modes are played, how features perform, and how we can improve the App.</p>
 
-<h2>6. Data Security</h2>
+<p>We use <strong>Firebase Crashlytics</strong> to collect crash reports and diagnostic information so we can find and fix bugs and improve stability.</p>
 
-<p>All data transmitted from the App to Firebase and AdMob services is encrypted in transit using <strong>HTTPS/TLS</strong>. Firebase and Google apply industry-standard security measures to protect stored data. We do not operate our own servers or databases — all collected data resides within Google's Firebase infrastructure.</p>
+<p>Firebase may assign a <strong>Firebase Installation ID (FID)</strong> to each app installation. The FID is a randomly generated identifier used for app analytics, diagnostics, and service operation. It is not used by us to directly identify a person. The FID may be reset if the user clears app data or reinstalls the App.</p>
 
-<h2>7. Children's Privacy</h2>
+<p>Google services may use your IP address or device signals to infer approximate location, such as country or region. We do not collect precise GPS location.</p>
 
-<p>The App is not directed at children under 13. We do not knowingly collect data from children. If you believe a child has provided us with personal data, please contact us so we can delete it.</p>
+<p>For more information, see the <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Privacy and Security documentation</a>.</p>
 
-<h2>8. Data Sharing</h2>
+<h2>6. Data Sharing</h2>
 
-<p>We do not sell, trade, or share your data with third parties, except as described above (Google AdMob and Firebase services). No data is sent to our own servers.</p>
+<p>We do not sell user data.</p>
 
-<h2>9. Data Retention</h2>
+<p>We may share or make data available to the third-party services used by the App, including Google AdMob, Google User Messaging Platform, Firebase Analytics, and Firebase Crashlytics. These services process data on our behalf or as independent service providers according to their own privacy policies and terms.</p>
 
-<p>Analytics data is retained by Firebase according to their default retention policies (typically 14 months). Crash reports are retained for 90 days. We do not maintain any separate database of user data.</p>
+<p>No data is sent to our own servers because we do not operate a separate backend server or user database for the App.</p>
 
-<h2>10. Changes to This Policy</h2>
+<h2>7. Data Security</h2>
 
-<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+<p>Data transmitted from the App to Google AdMob and Firebase services is encrypted in transit using HTTPS/TLS. Google and Firebase apply security measures to protect data processed by their services.</p>
 
-<h2>11. Contact</h2>
+<p>Because no method of transmission or storage is completely secure, we cannot guarantee absolute security. We use reputable third-party services and limit the data collected by the App to what is needed for advertising, analytics, diagnostics, consent management, fraud prevention, and app improvement.</p>
 
-<p>If you have questions about this Privacy Policy, contact us at:</p>
+<h2>8. Children's Privacy</h2>
+
+<p>The App is not directed to children under 13 and is not intended for use by children under 13. We do not knowingly ask children to provide personal information.</p>
+
+<p>If you believe that a child has provided personal information through the App, please contact us. We will review the request and take appropriate steps where possible.</p>
+
+<h2>9. Data Retention and Deletion</h2>
+
+<p>Local game progress, scores, and settings remain on your device until you delete the App or clear app data.</p>
+
+<p>Data processed by Google AdMob, Firebase Analytics, and Firebase Crashlytics is retained according to Google's and Firebase's retention policies and settings. Analytics data may be retained according to the configured Firebase retention period. Crash reports are retained according to Firebase Crashlytics retention rules.</p>
+
+<p>Because the App does not require user accounts and we do not operate our own user database, we may not be able to identify or delete a specific user's analytics or advertising records directly. You can reset or limit your Advertising ID in Android settings, clear app data, uninstall the App, or contact us with a deletion request. We will review deletion requests and take reasonable steps where possible.</p>
+
+<h2>10. Third-Party Services</h2>
+
+<p>The App uses the following third-party services:</p>
+
+<ul>
+    <li><a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a></li>
+    <li><a href="https://support.google.com/admob/answer/6128543" rel="noopener">Google AdMob</a></li>
+    <li><a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Privacy and Security</a></li>
+</ul>
+
+<h2>11. Changes to This Policy</h2>
+
+<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the App after changes means that the updated policy applies to your use of the App.</p>
+
+<h2>12. Contact</h2>
+
+<p>If you have questions about this Privacy Policy or want to submit a privacy-related request, contact us at:</p>
 <p><a href="mailto:gridline.app@proton.me">gridline.app@proton.me</a></p>
 
 </body>
